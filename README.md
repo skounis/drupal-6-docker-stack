@@ -9,6 +9,11 @@ docker run -p 3306:3306 --name mysqlserver -e MYSQL_ROOT_PASSWORD=root -d mysql/
 docker run -d -v application:/var/www -p 80:80 --name appserver --link mysqlserver:mysqldb iiiepe/apache-drupal6
 ```
 
+Login into the container
+```
+docker exec -it appserver /bin/bash
+```
+
 ## Containers
 MySQL
 - https://hub.docker.com/_/mysql
