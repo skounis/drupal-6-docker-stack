@@ -14,6 +14,11 @@ Login into the container
 docker exec -it appserver /bin/bash
 ```
 
+Access MySQL for the web container
+```
+mysql -h mysqldb -u root -proot
+```
+
 ## Containers
 MySQL
 - https://hub.docker.com/_/mysql
