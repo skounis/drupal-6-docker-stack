@@ -26,6 +26,11 @@ docker container rm $(docker container ls -aq)
 docker system prune --volumes
 ```
 
+Remove all Image 
+```
+docker rmi $(docker images -a -q)
+```
+
 ## Containers
 MySQL
 - https://hub.docker.com/_/mysql
