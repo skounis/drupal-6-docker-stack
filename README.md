@@ -9,6 +9,7 @@ Apache
 - https://hub.docker.com/r/iiiepe/apache-drupal6
 
 ## Instruction
+### Docker
 
 Start the containers 
 ```
@@ -17,12 +18,19 @@ docker pull iiiepe/apache-drupal6
 docker run -p 3306:3306 --name mysql -e MYSQL_ROOT_PASSWORD=root -d mysql:5.6
 docker run -d -v application:/var/www -p 80:80 --name web --link mysql:mysql iiiepe/apache-drupal6
 ```
+### Docker Stack
+Use the `docker-compose.yml` 
 
+Start the containers
+```
+docker-compose up
+```
+
+### Access the containers
 Login into the container
 ```
 docker exec -it web /bin/bash
 ```
-
 Access MySQL for the web container
 - host: `mysql`
 - u: `root`
@@ -34,6 +42,7 @@ apt-get install mysql-client
 mysql -h mysql -u root -proot
 ```
 
+### Clean Up
 Clean Up. Stop and Remove all the container. 
 ```
 docker container stop $(docker container ls -aq)
