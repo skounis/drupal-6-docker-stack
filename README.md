@@ -28,6 +28,11 @@ Access MySQL for the web container
 mysql -h mysqldb -u root -proot
 ```
 
+```
+apt-get update
+apt-get install mysql-client
+```
+
 Clean Up. Stop and Remove all the container. 
 ```
 docker container stop $(docker container ls -aq)
