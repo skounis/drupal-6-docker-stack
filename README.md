@@ -19,6 +19,13 @@ Access MySQL for the web container
 mysql -h mysqldb -u root -proot
 ```
 
+Clean Up. Stop and Remove all the container. 
+```
+docker container stop $(docker container ls -aq)
+docker container rm $(docker container ls -aq)
+docker system prune --volumes
+```
+
 ## Containers
 MySQL
 - https://hub.docker.com/_/mysql
