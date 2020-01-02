@@ -24,13 +24,14 @@ docker exec -it appserver /bin/bash
 ```
 
 Access MySQL for the web container
-```
-mysql -h mysqldb -u root -proot
-```
+- host: `mysqldb`
+- u: `root`
+- p: `root`
 
 ```
 apt-get update
 apt-get install mysql-client
+mysql -h mysqldb -u root -proot
 ```
 
 Clean Up. Stop and Remove all the container. 
