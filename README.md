@@ -1,4 +1,4 @@
-# drupal-6-docker-stack
+# Drupal 6 Docker Stack
 PHP 5.3 MySQL 5.6 Containers for Drupal 6
 
 ## Containers
